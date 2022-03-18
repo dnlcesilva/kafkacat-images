@@ -62,6 +62,7 @@ RUN ln -s /usr/local/bin/kcat /usr/local/bin/kafkacat \
     && microdnf install dnf \
     && dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm \
     && dnf install -y ca-certificates \
+    && dnf install -y openssh-server openssh-clients \
     && echo "===> clean up ..."  \
     && dnf clean all \
     && rm -rf /tmp/*
